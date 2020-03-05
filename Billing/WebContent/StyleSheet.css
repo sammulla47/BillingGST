@@ -1,0 +1,183 @@
+@CHARSET "ISO-8859-1";
+
+/* ----------Body and Page-Size----------- */
+
+body {
+  background: rgb(204,204,204); 
+}
+page {
+  background: white;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 0.5cm;
+  box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
+}
+page[size="A4"] {  
+  width: 21cm;
+  height: 29.7cm; 
+}
+@media print {
+  body, page {
+    margin: 0;
+    box-shadow: 0;
+  }
+}
+
+/* ------------------ Header ------------- */
+h1, h2, h3 {
+ margin: 0px;
+}
+.h1{
+    text-align: right;
+    color: Red;
+ font-size: 10px;
+ font-weight: bold;
+}
+.h2{
+    text-align: Center;
+    color: Black;
+ font-size: 45px;
+ font-weight: bold;
+ margin-top: 20px;
+}
+.h3{
+	text-align: Center;
+	color: Black;
+	font-size: 18px;
+	font-weight: lighter;
+	margin-bottom: 10px;
+}
+
+/*------------------ Table --------------------*/
+.tr{
+	font-size: 14px;
+}
+
+.th1{
+	font-size: 14px;
+}
+
+.th2{
+	font-size: 12px;
+}
+
+.thG{
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.text1{
+	font-size: 15px;
+	font-weight: bold;
+	text-align:center;
+    display: block;
+     padding: 0px;
+}
+
+.tr1{
+	font-size: 16px;
+}
+
+.table1{
+	border: 1px solid;
+}
+
+
+.text-right{
+    text-align:center;
+    display: block;
+     padding: 0px;
+    /* margin: 0 auto 1em auto;
+    width: 90%;  
+     border: 1px solid #818181;
+ 	 -moz-border-radius: 1px;
+    -webkit-border-radius: 1px; 
+    padding: 3px;*/
+}
+
+/*------------------ Div --------------------*/
+
+
+
+.rowmain {
+  display: flex; 
+width: 99.6%;
+padding: 1px 0 1px 0;
+margin: 1px 0 1px 0;
+border: 1px solid;
+overflow: none;
+}
+
+.leftone {
+	position: relative;
+float: left;
+clear: right;
+width: 53%;
+height: 20px;
+  font-family: Arial;
+  font-size: 14px;
+ overflow: hidden;
+}
+
+.rightone {
+		position: relative;
+float: left;
+clear: left;
+width: 46%;
+height: 20px;
+  font-family: Arial;
+    font-size: 14px;
+  
+}
+
+.lefttext {
+	position: relative;
+float: left;
+clear: right;
+width: 77%;
+height: 120px;
+  font-family: Arial;
+  font-size: 14px;
+  margin:  12px 14px 22px 0;
+   padding: 0;
+  border: 1px solid;
+ overflow: hidden;
+}
+
+.righttext {
+		position: relative;
+float: left;
+clear: left;
+width: 32%;
+height: 165px;
+margin: 1px 1px 1px 1px;
+    padding: 0px 0px 0px 0px;
+  font-family: Arial;
+    font-size: 10px;
+  border: 1px solid;
+}
+
+  /* Medium Devices, Desktops */
+    @media only screen and (max-width : 600px) {
+		.lefttext  {
+			width: 98%;
+			margin: auto;			
+		}
+		
+		.righttext {
+			width: 98%;
+			margin: auto;
+			border: 2px dashed white;	
+		}
+		
+		.leftone  {
+			width: 98%;
+			margin: auto;			
+		}
+		
+		.rightone {
+			width: 98%;
+			margin: auto;
+			border: 2px dashed white;	
+		}
+	}
