@@ -1,46 +1,51 @@
 @CHARSET "ISO-8859-1";
 
 /* ----------Body and Page-Size----------- */
-
 body {
-  background: rgb(204,204,204); 
-}  
+	background: rgb(204, 204, 204);
+}
+
 page {
-  background: white;
-  display: block;
-  margin: 0 auto;
-  margin-bottom: 0.5cm;
-  box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
+	background: white;
+	display: block;
+	margin: 0 auto;
+	margin-bottom: 0.5cm;
+	box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
 }
-page[size="A4"] {  
-  width: 21cm;
-  height: 29.7cm; 
+
+page[size="A4"] {
+	width: 21cm;
+	height: 29.7cm;
 }
+
 @media print {
-  body, page {
-    margin: 0;
-    box-shadow: 0;
-  }
+	body, page {
+		margin: 0;
+		box-shadow: 0;
+	}
 }
 
 /* ------------------ Header ------------- */
 h1, h2, h3 {
- margin: 0px;
+	margin: 0px;
 }
-.h1{
-    text-align: right;
-    color: Red;
- font-size: 10px;
- font-weight: bold;
+
+.h1 {
+	text-align: right;
+	color: Red;
+	font-size: 10px;
+	font-weight: bold;
 }
-.h2{
-    text-align: Center;
-    color: Black;
- font-size: 45px;
- font-weight: bold;
- margin-top: 20px;
+
+.h2 {
+	text-align: Center;
+	color: Black;
+	font-size: 45px;
+	font-weight: bold;
+	margin-top: 20px;
 }
-.h3{
+
+.h3 {
 	text-align: Center;
 	color: Black;
 	font-size: 18px;
@@ -49,46 +54,45 @@ h1, h2, h3 {
 }
 
 /*------------------ Table --------------------*/
-.tr{
+.tr {
 	font-size: 14px;
 }
 
-.th1{
+.th1 {
 	font-size: 14px;
 }
 
-.th2{
+.th2 {
 	font-size: 14px;
 }
 
-.thG{
+.thG {
 	font-size: 16px;
 	font-weight: bold;
+	border: thick ;
 }
 
-.text1{
+.text1 {
 	font-size: 15px;
 	font-weight: bold;
-	text-align:center;
-    display: block;
-     padding: 0px;
+	text-align: center;
+	display: block;
+	padding: 0px;
 }
 
-.tr1{
+.tr1 {
 	font-size: 16px;
 }
 
-.table1{
+.table1 {
 	border: 1px solid;
 }
 
-
-.text-right{
-    
-    display: block;
-    text-align: center;
-     padding: 0px;
-    /* margin: 0 auto 1em auto;
+.text-right {
+	display: block;
+	text-align: justify;
+	padding: 0px;
+	/* margin: 0 auto 1em auto;
     width: 90%;  
      border: 1px solid #818181;
  	 -moz-border-radius: 1px;
@@ -97,88 +101,83 @@ h1, h2, h3 {
 }
 
 /*------------------ Div --------------------*/
-
-
-
 .rowmain {
-  display: flex; 
-width: 99.6%;
-padding: 1px 0 1px 0;
-margin: 1px 0 1px 0;
-border: 1px solid;
-overflow: none;
+	display: flex;
+	width: 99.6%;
+	padding: 1px 0 1px 0;
+	margin: 1px 0 1px 0;
+	border: 1px solid;
+	overflow: none;
 }
 
 .leftone {
 	position: relative;
-float: left;
-clear: right;
-width: 53%;
-height: 20px;
-  font-family: Arial;
-  font-size: 14px;
- overflow: hidden;
+	float: left;
+	clear: right;
+	width: 53%;
+	height: 20px;
+	font-family: Arial;
+	font-size: 14px;
+	overflow: hidden;
 }
 
 .rightone {
-		position: relative;
-float: left;
-clear: left;
-width: 46%;
-height: 20px;
-  font-family: Arial;
-    font-size: 14px;
-  
+	position: relative;
+	float: left;
+	clear: left;
+	width: 46%;
+	height: 20px;
+	font-family: Arial;
+	font-size: 14px;
 }
 
 .lefttext {
 	position: relative;
-float: left;
-clear: right;
-width: 77%;
-height: 120px;
-  font-family: Arial;
-  font-size: 14px;
-  margin:  12px 14px 22px 0;
-   padding: 0;
-  border: 1px solid;
- overflow: hidden;
+	float: left;
+	clear: right;
+	width: 65%;
+	height: 150px;
+	font-family: Arial;
+	font-size: 14px;
+	margin: 12px 14px 22px 0;
+	padding: 0;
+	border: 1px solid;
+	overflow: hidden;
 }
 
 .righttext {
-		position: relative;
-float: left;
-clear: left;
-width: 32%;
-height: 120px;
-margin: 1px 1px 1px 1px;
-    padding: 0px 0px 0px 0px;
-  font-family: Arial;
-    font-size: 10px;
-  border: 0px solid;
+	position: static;
+	float: right;
+	clear: right;
+	width: 35%;
+	height: 150px;
+	margin: 1px 1px 1px 1px;
+	padding: 0px 0px 0px 30px;
+	font-family: Arial;
+	font-size: 14px;
+	border: 0px solid;
 }
 
-  /* Medium Devices, Desktops */
-    @media only screen and (max-width : 600px) {
-		.lefttext  {
-			width: 98%;
-			margin: auto;			
-		}
-		
-		.righttext {
-			width: 98%;
-			margin: auto;
-			border: 2px dashed white;	
-		}
-		
-		.leftone  {
-			width: 98%;
-			margin: auto;			
-		}
-		
-		.rightone {
-			width: 98%;
-			margin: auto;
-			border: 2px dashed white;	
-		}
+
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 480px) {
+	.lefttext {
+		width: 98%;
+		margin: auto;
 	}
+	.righttext {
+		width: 98%;
+		margin: auto;
+		border: 2px dashed white;
+	}
+	.leftone {
+		width: 98%;
+		margin: auto;
+	}
+	.rightone {
+		width: 98%;
+		margin: auto;
+		border: 2px dashed white;
+	}
+}
