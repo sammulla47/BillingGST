@@ -88,6 +88,12 @@ h1, h2, h3 {
 	border: 1px solid;
 }
 
+.text-right1 {
+	display: inline-table;
+	text-align: justify;
+	padding: 0px;
+	}
+	
 .text-right {
 	display: block;
 	text-align: justify;
