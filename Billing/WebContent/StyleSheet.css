@@ -85,7 +85,7 @@ h1, h2, h3 {
 
 .text-right{
     text-align:justify;
-    display: inline-flex;
+    display: flex;
      padding: 0px;
     /* margin: 0 auto 1em auto;
     width: 90%;  
