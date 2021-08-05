@@ -85,8 +85,8 @@ h1, h2, h3 {
 
 .text-right{
     
-    display: inline-flex;
-    text-align: justify;
+    display: block;
+    text-align: center;
      padding: 0px;
     /* margin: 0 auto 1em auto;
     width: 90%;  
@@ -150,7 +150,7 @@ height: 120px;
 float: left;
 clear: left;
 width: 32%;
-height: 165px;
+height: 120px;
 margin: 1px 1px 1px 1px;
     padding: 0px 0px 0px 0px;
   font-family: Arial;
