@@ -84,7 +84,7 @@ h1, h2, h3 {
 
 
 .text-right{
-    text-align:left;
+    text-align:right;
     display: block;
      padding: 0px;
     /* margin: 0 auto 1em auto;
