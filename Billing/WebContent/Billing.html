@@ -15,295 +15,312 @@
 
 </head>
 <body>
-		<div class="container d-flex justify-content-center mt-50 mb-50">
-        <div class="row">
-        <div class="col-md-12 text-right mb-3">
-        <button class="btn btn-primary" id="download"> Download PDF</button>
-        </div>
-	<page size="A4">
-	<div  id="invoice">
-	<h2 class="h2">
-		<br>
-	</h2>
-	<h3 class="h3">
-	<br>
-	<br>
-	</h3>
+	<marquee> Note : Invoice Sample Proper View On Desktop. </marquee>
 
-	<div class="rowmain">
-		<table class="leftone">
-			<tr>
-				<th>M/s.</th>
-				<td><textarea name="particulars" rows="2" cols="45"></textarea></td>
-			</tr>
-			<tr>
-				<th>GST NO.</th>
-				<td valign="middle"><input type="text" size="25"></td>
-			</tr>
-		</table>
-
-		<table class="rightone">
-			<tr>
-				<th>Invoice No.</th>
-				<td><input type="text" style="width: 8em"></td>
-
-				<th>Date.</th>
-				<td><input type="date" style="width: 10em"></td>
-			</tr>
-			<tr>
-				<th>D.Challan No.</th>
-				<td><input type="text" style="width: 8em"></td>
-
-				<th>Date.</th>
-				<td><input type="date" style="width: 10em"></td>
-			</tr>
-		</table>
+	<div class="col-md-12 text-right mb-3">
+		<button class="btn btn-primary" id="download">Download
+			Invoice PDF</button>
 	</div>
+	<div class="page" data-size="A4">
+
+		<div id="invoice">
+			<h2 class="h2">
+				<br>
+			</h2>
+			<h3 class="h3">
+				<br> <br>
+			</h3>
+
+			<div class="rowmain">
+				<table class="leftone">
+					<tr>
+						<th>M/s.</th>
+						<td><textarea name="particulars" rows="2" cols="45"></textarea></td>
+					</tr>
+					<tr>
+						<th>GST NO.</th>
+						<td valign="middle"><input type="text" size="25"></td>
+					</tr>
+				</table>
+
+				<table class="rightone">
+					<tr>
+						<th>Invoice No.</th>
+						<td><input type="text" style="width: 8em"></td>
+
+						<th>Date.</th>
+						<td><input type="date" style="width: 10em"></td>
+					</tr>
+					<tr>
+						<th>D.Challan No.</th>
+						<td><input type="text" style="width: 8em"></td>
+
+						<th>Date.</th>
+						<td><input type="date" style="width: 10em"></td>
+					</tr>
+				</table>
+			</div>
 
 
-	<div class="rowmain">
-		<table>
-			<thead class="th1">
-				<tr>
-					<th>Sr. No.</th>
-					<th>PARTICULARS.</th>
-					<th>HSN <br> CODE
-					</th>
-					<th>%</th>
-					<th>RATE</th>
-					<th>QTY</th>
-					<th>GST <br> AMOUNT
-					</th>
-					<th>AMOUNT</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td><input type="Number" style="width: 2.5em" min="0" max="1">
-					</td>
-					<td><textarea name="particulars" rows="2" cols="31"></textarea></td>
-					<td valign="middle"><input type="text" size="5" name="HSNCODE"></td>
-					<td valign="middle"><input type="number" class="input prec1"
-						value="" style="width: 3em" name="pre"></td>
-					<td valign="middle"><input type="number" name="rate"
-						class="input rate1" value="" style="width: 5em"></td>
-					<td valign="middle"><input type="number" name="qty"
-						class="input qty1" value="" style="width: 5em"></td>
-					<td valign="middle"><input disabled="disabled" id="Gst1"
-						style="width: 6.0em" name="gst"></td>
-					<td valign="middle"><input disabled="disabled"
-						class="text-right1" id="result1" name="result1" class="input result1"
-						value="" style="width: 6.5em"></td>
-				</tr>
+			<div class="rowmain">
+				<table>
+					<thead class="th1">
+						<tr>
+							<th>Sr. No.</th>
+							<th>PARTICULARS.</th>
+							<th>HSN <br> CODE
+							</th>
+							<th>%</th>
+							<th>RATE</th>
+							<th>QTY</th>
+							<th>GST <br> AMOUNT
+							</th>
+							<th>AMOUNT</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><input type="Number" style="width: 2.5em" min="0"
+								max="1"></td>
+							<td><textarea name="particulars" rows="2" cols="31"></textarea></td>
+							<td valign="middle"><input type="text" size="5"
+								name="HSNCODE"></td>
+							<td valign="middle"><input type="number" class="input prec1"
+								value="" style="width: 3em" name="pre"></td>
+							<td valign="middle"><input type="number" name="rate"
+								class="input rate1" value="" style="width: 5em"></td>
+							<td valign="middle"><input type="number" name="qty"
+								class="input qty1" value="" style="width: 5em"></td>
+							<td valign="middle"><input disabled="disabled" id="Gst1"
+								style="width: 6.0em" name="gst"></td>
+							<td valign="middle"><input disabled="disabled"
+								class="text-right" id="result1" name="result1"
+								class="input result1" value="" style="width: 6.5em"></td>
+						</tr>
 
-				<tr>
-					<td><input type="Number" style="width: 2.5em" min="0" max="1">
-					</td>
-					<td><textarea name="particulars" rows="2" cols="31"></textarea></td>
-					<td valign="middle"><input type="text" size="5" name="HSNCODE"></td>
-					<td valign="middle"><input type="number" class="input prec2"
-						value="" style="width: 3em" name="pre"></td>
-					<td valign="middle"><input type="number" name="rate"
-						class="input rate2" value="" style="width: 5em"></td>
-					<td valign="middle"><input type="number" name="qty"
-						class="input qty2" value="" style="width: 5em"></td>
-					<td valign="middle"><input disabled="disabled" id="Gst2"
-						style="width: 6.0em" name="gst2"></td>
-					<td valign="middle"><input disabled="disabled"
-						class="text-right1" id="result2" name="result2" class="input result2"
-						style="width: 6.5em"></td>
-				</tr>
+						<tr>
+							<td><input type="Number" style="width: 2.5em" min="0"
+								max="1"></td>
+							<td><textarea name="particulars" rows="2" cols="31"></textarea></td>
+							<td valign="middle"><input type="text" size="5"
+								name="HSNCODE"></td>
+							<td valign="middle"><input type="number" class="input prec2"
+								value="" style="width: 3em" name="pre"></td>
+							<td valign="middle"><input type="number" name="rate"
+								class="input rate2" value="" style="width: 5em"></td>
+							<td valign="middle"><input type="number" name="qty"
+								class="input qty2" value="" style="width: 5em"></td>
+							<td valign="middle"><input disabled="disabled" id="Gst2"
+								style="width: 6.0em" name="gst2"></td>
+							<td valign="middle"><input disabled="disabled"
+								class="text-right" id="result2" name="result2"
+								class="input result2" style="width: 6.5em"></td>
+						</tr>
 
-				<tr>
-					<td><input type="Number" style="width: 2.5em" min="0" max="1">
-					</td>
-					<td><textarea name="particulars" rows="2" cols="31"></textarea></td>
-					<td valign="middle"><input type="text" size="5" name="HSNCODE"></td>
-					<td valign="middle"><input type="number" class="input prec3"
-						value="" style="width: 3em" name="pre"></td>
-					<td valign="middle"><input type="number" name="rate"
-						class="input rate3" value="" style="width: 5em"></td>
-					<td valign="middle"><input type="number" name="qty"
-						class="input qty3" value="" style="width: 5em"></td>
-					<td valign="middle"><input disabled="disabled" id="Gst3"
-						style="width: 6.0em" name="gst3"></td>
-					<td valign="middle"><input disabled="disabled"
-						class="text-right1" id="result3" name="result3" class="input result3"
-						style="width: 6.5em"></td>
-				</tr>
+						<tr>
+							<td><input type="Number" style="width: 2.5em" min="0"
+								max="1"></td>
+							<td><textarea name="particulars" rows="2" cols="31"></textarea></td>
+							<td valign="middle"><input type="text" size="5"
+								name="HSNCODE"></td>
+							<td valign="middle"><input type="number" class="input prec3"
+								value="" style="width: 3em" name="pre"></td>
+							<td valign="middle"><input type="number" name="rate"
+								class="input rate3" value="" style="width: 5em"></td>
+							<td valign="middle"><input type="number" name="qty"
+								class="input qty3" value="" style="width: 5em"></td>
+							<td valign="middle"><input disabled="disabled" id="Gst3"
+								style="width: 6.0em" name="gst3"></td>
+							<td valign="middle"><input disabled="disabled"
+								class="text-right" id="result3" name="result3"
+								class="input result3" style="width: 6.5em"></td>
+						</tr>
 
-				<tr>
-					<td><input type="Number" style="width: 2.5em" min="0" max="1">
-					</td>
-					<td><textarea name="particulars" rows="2" cols="31"></textarea></td>
-					<td valign="middle"><input type="text" size="5" name="HSNCODE"></td>
-					<td valign="middle"><input type="number" class="input1 prec4"
-						value="" style="width: 3em" name="pre"></td>
-					<td valign="middle"><input type="number" name="rate"
-						class="input rate4" value="" style="width: 5em"></td>
-					<td valign="middle"><input type="number" name="qty"
-						class="input qty4" value="" style="width: 5em"></td>
-					<td valign="middle"><input disabled="disabled" id="Gst4"
-						style="width: 6.0em" name="gst4"></td>
-					<td valign="middle"><input disabled="disabled"
-						class="text-right1" id="result4" name="result4" class="input result4"
-						style="width: 6.5em"></td>
-				</tr>
+						<tr>
+							<td><input type="Number" style="width: 2.5em" min="0"
+								max="1"></td>
+							<td><textarea name="particulars" rows="2" cols="31"></textarea></td>
+							<td valign="middle"><input type="text" size="5"
+								name="HSNCODE"></td>
+							<td valign="middle"><input type="number"
+								class="input1 prec4" value="" style="width: 3em" name="pre"></td>
+							<td valign="middle"><input type="number" name="rate"
+								class="input rate4" value="" style="width: 5em"></td>
+							<td valign="middle"><input type="number" name="qty"
+								class="input qty4" value="" style="width: 5em"></td>
+							<td valign="middle"><input disabled="disabled" id="Gst4"
+								style="width: 6.0em" name="gst4"></td>
+							<td valign="middle"><input disabled="disabled"
+								class="text-right" id="result4" name="result4"
+								class="input result4" style="width: 6.5em"></td>
+						</tr>
 
-				<tr>
-					<td><input type="Number" style="width: 2.5em" min="0" max="1">
-					</td>
-					<td><textarea name="particulars" rows="2" cols="31"></textarea></td>
-					<td valign="middle"><input type="text" size="5" name="HSNCODE"></td>
-					<td valign="middle"><input type="number" class="input1 prec5"
-						value="" style="width: 3em" name="pre"></td>
-					<td valign="middle"><input type="number" name="rate"
-						class="input rate5" value="" style="width: 5em"></td>
-					<td valign="middle"><input type="number" name="qty"
-						class="input qty5" value="" style="width: 5em"></td>
-					<td valign="middle"><input disabled="disabled" id="Gst5"
-						style="width: 6.0em" name="gst5"></td>
-					<td valign="middle"><input disabled="disabled"
-						class="text-right1" id="result5" name="result5" class="input result5"
-						style="width: 6.5em"></td>
-				</tr>
+						<tr>
+							<td><input type="Number" style="width: 2.5em" min="0"
+								max="1"></td>
+							<td><textarea name="particulars" rows="2" cols="31"></textarea></td>
+							<td valign="middle"><input type="text" size="5"
+								name="HSNCODE"></td>
+							<td valign="middle"><input type="number"
+								class="input1 prec5" value="" style="width: 3em" name="pre"></td>
+							<td valign="middle"><input type="number" name="rate"
+								class="input rate5" value="" style="width: 5em"></td>
+							<td valign="middle"><input type="number" name="qty"
+								class="input qty5" value="" style="width: 5em"></td>
+							<td valign="middle"><input disabled="disabled" id="Gst5"
+								style="width: 6.0em" name="gst5"></td>
+							<td valign="middle"><input disabled="disabled"
+								class="text-right" id="result5" name="result5"
+								class="input result5" style="width: 6.5em"></td>
+						</tr>
 
-				<tr>
-					<td><input type="Number" style="width: 2.5em" min="0" max="1">
-					</td>
-					<td><textarea name="particulars" rows="2" cols="31"></textarea></td>
-					<td valign="middle"><input type="text" size="5" name="HSNCODE"></td>
-					<td valign="middle"><input type="number" class="input1 prec6"
-						value="" style="width: 3em" name="pre"></td>
-					<td valign="middle"><input type="number" name="rate"
-						class="input rate6" value="" style="width: 5em"></td>
-					<td valign="middle"><input type="number" name="qty"
-						class="input qty6" value="" style="width: 5em"></td>
-					<td valign="middle"><input disabled="disabled" id="Gst6"
-						style="width: 6.0em" name="gst6"></td>
-					<td valign="middle"><input disabled="disabled"
-						class="text-right1" id="result6" name="result6" class="input result6"
-						style="width: 6.5em"></td>
-				</tr>
-			</tbody>
-		</table>
-	</div>
-	<div class="rowmain">
+						<tr>
+							<td><input type="Number" style="width: 2.5em" min="0"
+								max="1"></td>
+							<td><textarea name="particulars" rows="2" cols="31"></textarea></td>
+							<td valign="middle"><input type="text" size="5"
+								name="HSNCODE"></td>
+							<td valign="middle"><input type="number"
+								class="input1 prec6" value="" style="width: 3em" name="pre"></td>
+							<td valign="middle"><input type="number" name="rate"
+								class="input rate6" value="" style="width: 5em"></td>
+							<td valign="middle"><input type="number" name="qty"
+								class="input qty6" value="" style="width: 5em"></td>
+							<td valign="middle"><input disabled="disabled" id="Gst6"
+								style="width: 6.0em" name="gst6"></td>
+							<td valign="middle"><input disabled="disabled"
+								class="text-right" id="result6" name="result6"
+								class="input result6" style="width: 6.5em"></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="rowmain">
 
-		<div class="leftttext">
-			<table class="th1">
-				<tr>
-					<th>Place of Supply</th>
-					<td><select name=slist>
-<option value="">------------Select State------------</option>
-<option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
-<option value="Andhra Pradesh">Andhra Pradesh</option>
-<option value="Arunachal Pradesh">Arunachal Pradesh</option>
-<option value="Assam">Assam</option>
-<option value="Bihar">Bihar</option>
-<option value="Chandigarh">Chandigarh</option>
-<option value="Chhattisgarh">Chhattisgarh</option>
-<option value="Dadra and Nagar Haveli">Dadra and Nagar Haveli</option>
-<option value="Daman and Diu">Daman and Diu</option>
-<option value="Delhi">Delhi</option>
-<option value="Goa">Goa</option>
-<option value="Gujarat">Gujarat</option>
-<option value="Haryana">Haryana</option>
-<option value="Himachal Pradesh">Himachal Pradesh</option>
-<option value="Jammu and Kashmir">Jammu and Kashmir</option>
-<option value="Jharkhand">Jharkhand</option>
-<option value="Karnataka">Karnataka</option>
-<option value="Kerala">Kerala</option>
-<option value="Lakshadweep">Lakshadweep</option>
-<option value="Madhya Pradesh">Madhya Pradesh</option>
-<option value="Maharashtra">Maharashtra</option>
-<option value="Manipur">Manipur</option>
-<option value="Meghalaya">Meghalaya</option>
-<option value="Mizoram">Mizoram</option>
-<option value="Nagaland">Nagaland</option>
-<option value="Orissa">Orissa</option>
-<option value="Pondicherry">Pondicherry</option>
-<option value="Punjab">Punjab</option>
-<option value="Rajasthan">Rajasthan</option>
-<option value="Sikkim">Sikkim</option>
-<option value="Tamil Nadu">Tamil Nadu</option>
-<option value="Tripura">Tripura</option>
-<option value="Uttaranchal">Uttaranchal</option>
-<option value="Uttar Pradesh">Uttar Pradesh</option>
-<option value="West Bengal">West Bengal</option>
-</select></td>
-				</tr>
-				<tr>
-					<th>Billing Address</th>
-					<td><textarea name="particulars" rows="2" cols="55"></textarea></td>
-				</tr>
-				<tr>
-					<th>Shipping Address</th>
-					<td><textarea name="particulars" rows="2" cols="55"></textarea></td>
-				</tr>
-				<tr>
-					<th>Rupees in Words</th>
-				
-					<td><textarea id="word" value="" rows="2" cols="55"></textarea></td>
-				</tr>
-			</table>
+				<div class="leftttext">
+					<table class="th1">
+						<tr>
+							<th>Place of Supply</th>
+							<td><select name=slist>
+									<option value="">------------Select State------------</option>
+									<option value="Andaman and Nicobar Islands">Andaman
+										and Nicobar Islands</option>
+									<option value="Andhra Pradesh">Andhra Pradesh</option>
+									<option value="Arunachal Pradesh">Arunachal Pradesh</option>
+									<option value="Assam">Assam</option>
+									<option value="Bihar">Bihar</option>
+									<option value="Chandigarh">Chandigarh</option>
+									<option value="Chhattisgarh">Chhattisgarh</option>
+									<option value="Dadra and Nagar Haveli">Dadra and Nagar
+										Haveli</option>
+									<option value="Daman and Diu">Daman and Diu</option>
+									<option value="Delhi">Delhi</option>
+									<option value="Goa">Goa</option>
+									<option value="Gujarat">Gujarat</option>
+									<option value="Haryana">Haryana</option>
+									<option value="Himachal Pradesh">Himachal Pradesh</option>
+									<option value="Jammu and Kashmir">Jammu and Kashmir</option>
+									<option value="Jharkhand">Jharkhand</option>
+									<option value="Karnataka">Karnataka</option>
+									<option value="Kerala">Kerala</option>
+									<option value="Lakshadweep">Lakshadweep</option>
+									<option value="Madhya Pradesh">Madhya Pradesh</option>
+									<option value="Maharashtra">Maharashtra</option>
+									<option value="Manipur">Manipur</option>
+									<option value="Meghalaya">Meghalaya</option>
+									<option value="Mizoram">Mizoram</option>
+									<option value="Nagaland">Nagaland</option>
+									<option value="Orissa">Orissa</option>
+									<option value="Pondicherry">Pondicherry</option>
+									<option value="Punjab">Punjab</option>
+									<option value="Rajasthan">Rajasthan</option>
+									<option value="Sikkim">Sikkim</option>
+									<option value="Tamil Nadu">Tamil Nadu</option>
+									<option value="Tripura">Tripura</option>
+									<option value="Uttaranchal">Uttaranchal</option>
+									<option value="Uttar Pradesh">Uttar Pradesh</option>
+									<option value="West Bengal">West Bengal</option>
+							</select></td>
+						</tr>
+						<tr>
+							<th>Billing Address</th>
+							<td><textarea name="particulars" rows="2" cols="55"></textarea></td>
+						</tr>
+						<tr>
+							<th>Shipping Address</th>
+							<td><textarea name="particulars" rows="2" cols="55"></textarea></td>
+						</tr>
+						<tr>
+							<th>Rupees in Words</th>
+
+							<td><textarea id="word" value="" rows="2" cols="55"></textarea></td>
+						</tr>
+					</table>
+				</div>
+
+				<div class="righttext">
+					<table>
+						<tr>
+							<th class="th2">Total Amount Without GST</th>
+							<td><input disabled="disabled" class="text-right"
+								id="AmountT" style="width: 8em"></td>
+						</tr>
+						<tr>
+							<th class="th2">Total GST Amount</th>
+							<td><input disabled="disabled" class="text-right" id="GstT"
+								style="width: 8em"></td>
+						</tr>
+						<tr>
+							<th class="th2">CGST</th>
+							<td><input disabled="disabled" class="text-right" id="CGST"
+								style="width: 8em"></td>
+						</tr>
+						<tr>
+							<th class="th2">SGST</th>
+							<td><input disabled="disabled" class="text-right" id="SGST"
+								style="width: 8em"></td>
+						</tr>
+						<tr>
+							<th class="th2">IGST</th>
+							<td><input disabled="disabled" class="text-right"
+								style="width: 8em"></td>
+						</tr>
+						<tr>
+							<th class="thG">Grand Total</th>
+							<td><input disabled="disabled" class="text1" id="grandT"
+								value="" class="input number"
+								onkeyup="word.innerHTML=convertNumberToWords(this.value)"
+								style="width: 8em"></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+
+			<div class="rowmain">
+				<table>
+					<tr align="center">
+						<th align="left" class="th1">GST No : XXXXXXXXXXXX.<br>
+							Name Of Bank.<br> Name Of Branch.<br> IFSC Code :
+							XXXXXXXX.<br> A/C No : XXXXXXXXXXX.
+						</th>
+
+						<th align="left" width="380" class="th1">1.Interest at 24%
+							will be charged on bill not paid with in 15 days. <br> 2.We
+							reserve the right to demand payment of this bill at any time. <br>
+							3.All payments are to be made at payee's A/c Cheque only in
+							favour of XXX XXXX XXXXX. <br> 4.All our transaction & bill
+							are Subject to city Jurisdiction.
+						</th>
+
+						<th class="th1">For XXXXX XXXXX XXXXXX <img src="Sing.jpg"
+							align="middle" width="100" height="100"> <br>
+							Authorised Signatory
+						</th>
+					</tr>
+				</table>
+			</div>
+			<div align="center">Your Address.</div>
 		</div>
-		
-		<div class="righttext">
-			<table>
-				<tr>
-					<th class="th2">Total Amount Without GST</th>
-					<td><input disabled="disabled" class="text-right" id="AmountT" style="width: 8em"></td>
-				</tr>
-				<tr>
-					<th class="th2">Total GST Amount</th>
-					<td><input disabled="disabled" class="text-right" id="GstT" style="width: 8em"></td>
-				</tr>
-				<tr>
-					<th class="th2">CGST</th>
-					<td><input disabled="disabled" class="text-right" id="CGST" style="width: 8em"></td>
-				</tr>
-				<tr>
-					<th class="th2">SGST</th>
-					<td><input disabled="disabled" class="text-right" id="SGST" style="width: 8em"></td>
-				</tr>
-				<tr>
-					<th class="th2">IGST</th>
-					<td><input disabled="disabled" class="text-right"  style="width: 8em"></td>
-				</tr>
-				<tr>
-					<th class="thG">Grand Total</th>
-					<td><input disabled="disabled" class="text1" id="grandT"  value="" class="input number" onkeyup="word.innerHTML=convertNumberToWords(this.value)"  style="width: 8em"></td>
-				</tr>
-			</table>
-		</div>
 	</div>
-
-	<div class="rowmain">
-		<table>
-			<tr align="center">
-				<th align="left" class="th1">GST No : XXXXXXXXXXXX.<br>
-					Name Of Bank.<br> Name Of Branch.<br> IFSC
-					Code : XXXXXXXX.<br> A/C No : XXXXXXXXXXX.
-				</th>
-
-				<th align="left" width="380" class="th1">1.Interest at 24% will
-					be charged on bill not paid with in 15 days. <br> 2.We reserve
-					the right to demand payment of this bill at any time. <br>
-					3.All payments are to be made at payee's A/c Cheque only in favour
-					of XXX XXXX XXXXX. <br> 4.All our transaction & bill are
-					Subject to city Jurisdiction.
-				</th>
-
-				<th class="th1">For XXXXX XXXXX XXXXXX <img src="Sing.jpg"
-					align="middle" width="100" height="100"> <br> Authorised
-					Signatory
-				</th>
-			</tr>
-		</table>
-	</div>
-	<div align="center">Your Address.</div>
-	</div>
-	</page>
 </body>
 </html>

@@ -5,7 +5,7 @@ body {
 	background: rgb(204, 204, 204);
 }
 
-page {
+.page {
 	background: white;
 	display: block;
 	margin: 0 auto;
@@ -13,7 +13,7 @@ page {
 	box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
 }
 
-page[size="A4"] {
+.page[data-size="A4"] {
 	width: 21cm;
 	height: 29.7cm;
 }
@@ -25,7 +25,11 @@ page[size="A4"] {
 	}
 }
 
+
 /* ------------------ Header ------------- */
+marquee{
+	color: red;
+}
 h1, h2, h3 {
 	margin: 0px;
 }
@@ -87,12 +91,12 @@ h1, h2, h3 {
 .table1 {
 	border: 1px solid;
 }
-
+/*
 .text-right1 {
-	display: inline-table;
+	display: unset;
 	text-align: justify;
 	padding: 0px;
-	}
+	}*/
 	
 .text-right {
 	display: block;
@@ -167,7 +171,7 @@ h1, h2, h3 {
 
 
 /* Medium Devices, Desktops */
-@media only screen and (max-width : 360px) {
+@media only screen and (max-width : 600px) {
 	.lefttext {
 		width: 98%;
 		margin: auto;
