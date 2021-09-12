@@ -6,11 +6,15 @@
 <script type="text/javascript" src="jquery-1.9.1.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
 <script type="text/javascript" src="Script.js"></script>
+
 <link rel="stylesheet" href="StyleSheet.css">
-
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" crossorigin="anonymous">
-
+<link rel="stylesheet" href="bootstrap.min.css">
+<!-- 
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" crossorigin="anonymous"> -->
 <style id="compiled-css" type="text/css">
+
+
+
 </style>
 
 </head>
@@ -25,35 +29,35 @@
 	<div class="page" data-size="A4">
 		<div id="invoice">
 			<h2 class="h2">
-				<br>
+				<br/>
 			</h2>
 			<h3 class="h3">
-				<br> <br>
+				<br/>
 			</h3>
 
 			<div class="rowmain">
 				<table class="leftone">
 					<tr>
 						<th>M/s.</th>
-						<td><textarea name="particulars" rows="2" cols="45"></textarea></td>
+						<td><textarea name="particulars" rows="2" cols="42"></textarea></td>
 					</tr>
 					<tr>
 						<th>GST NO.</th>
-						<td valign="middle"><input type="text" size="25"></td>
+						<td valign="middle"><input type="text" size="24"></td>
 					</tr>
 				</table>
 
 				<table class="rightone">
 					<tr>
 						<th>Invoice No.</th>
-						<td><input type="text" style="width: 8em"></td>
+						<td><input type="text" style="width: 7em"></td>
 
 						<th>Date.</th>
 						<td><input type="date" style="width: 10em"></td>
 					</tr>
 					<tr>
 						<th>D.Challan No.</th>
-						<td><input type="text" style="width: 8em"></td>
+						<td><input type="text" style="width: 7em"></td>
 
 						<th>Date.</th>
 						<td><input type="date" style="width: 10em"></td>
@@ -82,7 +86,7 @@
 						<tr>
 							<td><input type="Number" style="width: 2.5em" min="0"
 								max="1"></td>
-							<td><textarea name="particulars" rows="2" cols="31"></textarea></td>
+							<td><textarea name="particulars" rows="2" cols="25"></textarea></td>
 							<td valign="middle"><input type="text" size="5"
 								name="HSNCODE"></td>
 							<td valign="middle"><input type="number" class="input prec1"
@@ -101,7 +105,7 @@
 						<tr>
 							<td><input type="Number" style="width: 2.5em" min="0"
 								max="1"></td>
-							<td><textarea name="particulars" rows="2" cols="31"></textarea></td>
+							<td><textarea name="particulars" rows="2" cols="25"></textarea></td>
 							<td valign="middle"><input type="text" size="5"
 								name="HSNCODE"></td>
 							<td valign="middle"><input type="number" class="input prec2"
@@ -120,7 +124,7 @@
 						<tr>
 							<td><input type="Number" style="width: 2.5em" min="0"
 								max="1"></td>
-							<td><textarea name="particulars" rows="2" cols="31"></textarea></td>
+							<td><textarea name="particulars" rows="2" cols="25"></textarea></td>
 							<td valign="middle"><input type="text" size="5"
 								name="HSNCODE"></td>
 							<td valign="middle"><input type="number" class="input prec3"
@@ -139,7 +143,7 @@
 						<tr>
 							<td><input type="Number" style="width: 2.5em" min="0"
 								max="1"></td>
-							<td><textarea name="particulars" rows="2" cols="31"></textarea></td>
+							<td><textarea name="particulars" rows="2" cols="25"></textarea></td>
 							<td valign="middle"><input type="text" size="5"
 								name="HSNCODE"></td>
 							<td valign="middle"><input type="number"
@@ -158,7 +162,7 @@
 						<tr>
 							<td><input type="Number" style="width: 2.5em" min="0"
 								max="1"></td>
-							<td><textarea name="particulars" rows="2" cols="31"></textarea></td>
+							<td><textarea name="particulars" rows="2" cols="25"></textarea></td>
 							<td valign="middle"><input type="text" size="5"
 								name="HSNCODE"></td>
 							<td valign="middle"><input type="number"
@@ -177,7 +181,7 @@
 						<tr>
 							<td><input type="Number" style="width: 2.5em" min="0"
 								max="1"></td>
-							<td><textarea name="particulars" rows="2" cols="31"></textarea></td>
+							<td><textarea name="particulars" rows="2" cols="25"></textarea></td>
 							<td valign="middle"><input type="text" size="5"
 								name="HSNCODE"></td>
 							<td valign="middle"><input type="number"
@@ -198,7 +202,7 @@
 			<div class="rowmain">
 
 				<div class="leftttext">
-					<table class="th1">
+					<table class="table-Add th1">
 						<tr>
 							<th>Place of Supply</th>
 							<td><select name=slist>
@@ -244,16 +248,16 @@
 						</tr>
 						<tr>
 							<th>Billing Address</th>
-							<td><textarea name="particulars" rows="2" cols="55"></textarea></td>
+							<td><textarea name="particulars" rows="2" cols="53"></textarea></td>
 						</tr>
 						<tr>
 							<th>Shipping Address</th>
-							<td><textarea name="particulars" rows="2" cols="55"></textarea></td>
+							<td><textarea name="particulars" rows="2" cols="53"></textarea></td>
 						</tr>
 						<tr>
 							<th>Rupees in Words</th>
 
-							<td><textarea id="word" value="" rows="2" cols="55"></textarea></td>
+							<td><textarea id="word" value="" rows="2" cols="53"></textarea></td>
 						</tr>
 					</table>
 				</div>
@@ -261,7 +265,7 @@
 				<div class="righttext">
 					<table>
 						<tr>
-							<th class="th2">Total Amount Without GST</th>
+							<th class="th2">Total Amount W/O  GST</th>
 							<td><input disabled="disabled" class="text-right"
 								id="AmountT" style="width: 8em"></td>
 						</tr>
