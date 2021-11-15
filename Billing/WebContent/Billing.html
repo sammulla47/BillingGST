@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="ISO-8859-1">
-<title>Billing</title>
-<script type="text/javascript" src="jquery-1.9.1.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
-<script type="text/javascript" src="Script.js"></script>
+	<meta charset="ISO-8859-1">
+	<title>Billing</title>
+	<script type="text/javascript" src="jquery-1.9.1.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
+	<script type="text/javascript" src="Script.js"></script>
 
-<link rel="stylesheet" href="StyleSheet.css">
-<link rel="stylesheet" href="bootstrap.min.css">
-<!-- 
+	<link rel="stylesheet" href="StyleSheet.css">
+	<link rel="stylesheet" href="bootstrap.min.css">
+	<!-- 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" crossorigin="anonymous"> -->
-<style id="compiled-css" type="text/css">
+	<style id="compiled-css" type="text/css">
 
 
 
-</style>
+	</style>
 
 </head>
+
 <body>
 	<marquee> Note : Invoice Sample Proper View On Desktop. </marquee>
 
@@ -25,14 +27,14 @@
 		<button class="btn btn-primary" id="download">Download
 			Invoice PDF</button>
 	</div>
-	
+
 	<div class="page" data-size="A4">
 		<div id="invoice">
 			<h2 class="h2">
-				<br/>
+				<br />
 			</h2>
 			<h3 class="h3">
-				<br/>
+				<br />
 			</h3>
 
 			<div class="rowmain">
@@ -43,7 +45,7 @@
 					</tr>
 					<tr>
 						<th>GST NO.</th>
-						<td valign="middle"><input type="text" size="24"></td>
+						<td><input type="text" size="24"></td>
 					</tr>
 				</table>
 
@@ -84,117 +86,69 @@
 					</thead>
 					<tbody>
 						<tr>
-							<td><input type="Number" style="width: 2.5em" min="0"
-								max="1"></td>
+							<td><input type="Number" style="width: 2.5em" min="0" max="1"></td>
 							<td><textarea name="particulars" rows="2" cols="25"></textarea></td>
-							<td valign="middle"><input type="text" size="4"
-								name="HSNCODE"></td>
-							<td valign="middle"><input type="number" class="input prec1"
-								value="" style="width: 3em" name="pre"></td>
-							<td valign="middle"><input type="number" name="rate"
-								class="input rate1" value="" style="width: 5em"></td>
-							<td valign="middle"><input type="number" name="qty"
-								class="input qty1" value="" style="width: 5em"></td>
-							<td valign="middle"><input disabled="disabled" id="Gst1"
-								style="width: 6.0em" name="gst"></td>
-							<td valign="middle"><input disabled="disabled"
-								class="text-right" id="result1" name="result1"
-								class="input result1" value="" style="width: 6.5em"></td>
+							<td valign="middle"><input type="text" size="4" name="HSNCODE"></td>
+							<td valign="middle"><input type="number" class="input prec1" value="" style="width: 3em" name="pre"></td>
+							<td valign="middle"><input type="number" name="rate" class="input rate1" value="" style="width: 5em"></td>
+							<td valign="middle"><input type="number" name="qty" class="input qty1" value="" style="width: 5em"></td>
+							<td valign="middle"><input disabled="disabled" id="Gst1" style="width: 6.0em" name="gst"></td>
+							<td valign="middle"><input disabled="disabled" class="text-right" id="result1" name="result1" class="input result1" value="" style="width: 6.5em"></td>
 						</tr>
 
 						<tr>
-							<td><input type="Number" style="width: 2.5em" min="0"
-								max="1"></td>
+							<td><input type="Number" style="width: 2.5em" min="0" max="1"></td>
 							<td><textarea name="particulars" rows="2" cols="25"></textarea></td>
-							<td valign="middle"><input type="text" size="4"
-								name="HSNCODE"></td>
-							<td valign="middle"><input type="number" class="input prec2"
-								value="" style="width: 3em" name="pre"></td>
-							<td valign="middle"><input type="number" name="rate"
-								class="input rate2" value="" style="width: 5em"></td>
-							<td valign="middle"><input type="number" name="qty"
-								class="input qty2" value="" style="width: 5em"></td>
-							<td valign="middle"><input disabled="disabled" id="Gst2"
-								style="width: 6.0em" name="gst2"></td>
-							<td valign="middle"><input disabled="disabled"
-								class="text-right" id="result2" name="result2"
-								class="input result2" style="width: 6.5em"></td>
+							<td valign="middle"><input type="text" size="4" name="HSNCODE"></td>
+							<td valign="middle"><input type="number" class="input prec2" value="" style="width: 3em" name="pre"></td>
+							<td valign="middle"><input type="number" name="rate" class="input rate2" value="" style="width: 5em"></td>
+							<td valign="middle"><input type="number" name="qty" class="input qty2" value="" style="width: 5em"></td>
+							<td valign="middle"><input disabled="disabled" id="Gst2" style="width: 6.0em" name="gst2"></td>
+							<td valign="middle"><input disabled="disabled" class="text-right" id="result2" name="result2" class="input result2" style="width: 6.5em"></td>
 						</tr>
 
 						<tr>
-							<td><input type="Number" style="width: 2.5em" min="0"
-								max="1"></td>
+							<td><input type="Number" style="width: 2.5em" min="0" max="1"></td>
 							<td><textarea name="particulars" rows="2" cols="25"></textarea></td>
-							<td valign="middle"><input type="text" size="4"
-								name="HSNCODE"></td>
-							<td valign="middle"><input type="number" class="input prec3"
-								value="" style="width: 3em" name="pre"></td>
-							<td valign="middle"><input type="number" name="rate"
-								class="input rate3" value="" style="width: 5em"></td>
-							<td valign="middle"><input type="number" name="qty"
-								class="input qty3" value="" style="width: 5em"></td>
-							<td valign="middle"><input disabled="disabled" id="Gst3"
-								style="width: 6.0em" name="gst3"></td>
-							<td valign="middle"><input disabled="disabled"
-								class="text-right" id="result3" name="result3"
-								class="input result3" style="width: 6.5em"></td>
+							<td valign="middle"><input type="text" size="4" name="HSNCODE"></td>
+							<td valign="middle"><input type="number" class="input prec3" value="" style="width: 3em" name="pre"></td>
+							<td valign="middle"><input type="number" name="rate" class="input rate3" value="" style="width: 5em"></td>
+							<td valign="middle"><input type="number" name="qty" class="input qty3" value="" style="width: 5em"></td>
+							<td valign="middle"><input disabled="disabled" id="Gst3" style="width: 6.0em" name="gst3"></td>
+							<td valign="middle"><input disabled="disabled" class="text-right" id="result3" name="result3" class="input result3" style="width: 6.5em"></td>
 						</tr>
 
 						<tr>
-							<td><input type="Number" style="width: 2.5em" min="0"
-								max="1"></td>
+							<td><input type="Number" style="width: 2.5em" min="0" max="1"></td>
 							<td><textarea name="particulars" rows="2" cols="25"></textarea></td>
-							<td valign="middle"><input type="text" size="4"
-								name="HSNCODE"></td>
-							<td valign="middle"><input type="number"
-								class="input1 prec4" value="" style="width: 3em" name="pre"></td>
-							<td valign="middle"><input type="number" name="rate"
-								class="input rate4" value="" style="width: 5em"></td>
-							<td valign="middle"><input type="number" name="qty"
-								class="input qty4" value="" style="width: 5em"></td>
-							<td valign="middle"><input disabled="disabled" id="Gst4"
-								style="width: 6.0em" name="gst4"></td>
-							<td valign="middle"><input disabled="disabled"
-								class="text-right" id="result4" name="result4"
-								class="input result4" style="width: 6.5em"></td>
+							<td valign="middle"><input type="text" size="4" name="HSNCODE"></td>
+							<td valign="middle"><input type="number" class="input1 prec4" value="" style="width: 3em" name="pre"></td>
+							<td valign="middle"><input type="number" name="rate" class="input rate4" value="" style="width: 5em"></td>
+							<td valign="middle"><input type="number" name="qty" class="input qty4" value="" style="width: 5em"></td>
+							<td valign="middle"><input disabled="disabled" id="Gst4" style="width: 6.0em" name="gst4"></td>
+							<td valign="middle"><input disabled="disabled" class="text-right" id="result4" name="result4" class="input result4" style="width: 6.5em"></td>
 						</tr>
 
 						<tr>
-							<td><input type="Number" style="width: 2.5em" min="0"
-								max="1"></td>
+							<td><input type="Number" style="width: 2.5em" min="0" max="1"></td>
 							<td><textarea name="particulars" rows="2" cols="25"></textarea></td>
-							<td valign="middle"><input type="text" size="4"
-								name="HSNCODE"></td>
-							<td valign="middle"><input type="number"
-								class="input1 prec5" value="" style="width: 3em" name="pre"></td>
-							<td valign="middle"><input type="number" name="rate"
-								class="input rate5" value="" style="width: 5em"></td>
-							<td valign="middle"><input type="number" name="qty"
-								class="input qty5" value="" style="width: 5em"></td>
-							<td valign="middle"><input disabled="disabled" id="Gst5"
-								style="width: 6.0em" name="gst5"></td>
-							<td valign="middle"><input disabled="disabled"
-								class="text-right" id="result5" name="result5"
-								class="input result5" style="width: 6.5em"></td>
+							<td valign="middle"><input type="text" size="4" name="HSNCODE"></td>
+							<td valign="middle"><input type="number" class="input1 prec5" value="" style="width: 3em" name="pre"></td>
+							<td valign="middle"><input type="number" name="rate" class="input rate5" value="" style="width: 5em"></td>
+							<td valign="middle"><input type="number" name="qty" class="input qty5" value="" style="width: 5em"></td>
+							<td valign="middle"><input disabled="disabled" id="Gst5" style="width: 6.0em" name="gst5"></td>
+							<td valign="middle"><input disabled="disabled" class="text-right" id="result5" name="result5" class="input result5" style="width: 6.5em"></td>
 						</tr>
 
 						<tr>
-							<td><input type="Number" style="width: 2.5em" min="0"
-								max="1"></td>
+							<td><input type="Number" style="width: 2.5em" min="0" max="1"></td>
 							<td><textarea name="particulars" rows="2" cols="25"></textarea></td>
-							<td valign="middle"><input type="text" size="4"
-								name="HSNCODE"></td>
-							<td valign="middle"><input type="number"
-								class="input1 prec6" value="" style="width: 3em" name="pre"></td>
-							<td valign="middle"><input type="number" name="rate"
-								class="input rate6" value="" style="width: 5em"></td>
-							<td valign="middle"><input type="number" name="qty"
-								class="input qty6" value="" style="width: 5em"></td>
-							<td valign="middle"><input disabled="disabled" id="Gst6"
-								style="width: 6.0em" name="gst6"></td>
-							<td valign="middle"><input disabled="disabled"
-								class="text-right" id="result6" name="result6"
-								class="input result6" style="width: 6.5em"></td>
+							<td valign="middle"><input type="text" size="4" name="HSNCODE"></td>
+							<td valign="middle"><input type="number" class="input1 prec6" value="" style="width: 3em" name="pre"></td>
+							<td valign="middle"><input type="number" name="rate" class="input rate6" value="" style="width: 5em"></td>
+							<td valign="middle"><input type="number" name="qty" class="input qty6" value="" style="width: 5em"></td>
+							<td valign="middle"><input disabled="disabled" id="Gst6" style="width: 6.0em" name="gst6"></td>
+							<td valign="middle"><input disabled="disabled" class="text-right" id="result6" name="result6" class="input result6" style="width: 6.5em"></td>
 						</tr>
 					</tbody>
 				</table>
@@ -244,7 +198,7 @@
 									<option value="Uttaranchal">Uttaranchal</option>
 									<option value="Uttar Pradesh">Uttar Pradesh</option>
 									<option value="West Bengal">West Bengal</option>
-							</select></td>
+								</select></td>
 						</tr>
 						<tr>
 							<th>Billing Address</th>
@@ -265,36 +219,28 @@
 				<div class="righttext">
 					<table>
 						<tr>
-							<th class="th2">Total Amount W/O  GST</th>
-							<td><input disabled="disabled" class="text-right"
-								id="AmountT" style="width: 8em"></td>
+							<th class="th2">Total Amount W/O GST</th>
+							<td><input disabled="disabled" class="text-right" id="AmountT" style="width: 8em"></td>
 						</tr>
 						<tr>
 							<th class="th2">Total GST Amount</th>
-							<td><input disabled="disabled" class="text-right" id="GstT"
-								style="width: 8em"></td>
+							<td><input disabled="disabled" class="text-right" id="GstT" style="width: 8em"></td>
 						</tr>
 						<tr>
 							<th class="th2">CGST</th>
-							<td><input disabled="disabled" class="text-right" id="CGST"
-								style="width: 8em"></td>
+							<td><input disabled="disabled" class="text-right" id="CGST" style="width: 8em"></td>
 						</tr>
 						<tr>
 							<th class="th2">SGST</th>
-							<td><input disabled="disabled" class="text-right" id="SGST"
-								style="width: 8em"></td>
+							<td><input disabled="disabled" class="text-right" id="SGST" style="width: 8em"></td>
 						</tr>
 						<tr>
 							<th class="th2">IGST</th>
-							<td><input disabled="disabled" class="text-right"
-								style="width: 8em"></td>
+							<td><input disabled="disabled" class="text-right" style="width: 8em"></td>
 						</tr>
 						<tr>
 							<th class="thG">Grand Total</th>
-							<td><input disabled="disabled" class="text1" id="grandT"
-								value="" class="input number"
-								onkeyup="word.innerHTML=convertNumberToWords(this.value)"
-								style="width: 8em"></td>
+							<td><input disabled="disabled" class="text1" id="grandT" value="" class="input number" onkeyup="word.innerHTML=convertNumberToWords(this.value)" style="width: 8em"></td>
 						</tr>
 					</table>
 				</div>
@@ -316,8 +262,7 @@
 							are Subject to city Jurisdiction.
 						</th>
 
-						<th class="th1">For XXXXX XXXXX XXXXXX <img src="Sing.jpg"
-							align="middle" width="100" height="100"> <br>
+						<th class="th1">For XXXXX XXXXX XXXXXX <img src="Sing.jpg" align="middle" width="100" height="100"> <br>
 							Authorised Signatory
 						</th>
 					</tr>
@@ -327,4 +272,5 @@
 		</div>
 	</div>
 </body>
+
 </html>
