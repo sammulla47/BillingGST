@@ -238,3 +238,11 @@ h1, h2, h3 {
 		/*border: 2px dashed white;*/
 	}
 } */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+input[type=number] {
+    -moz-appearance: textfield;
+    -webkit-appearance: none;
+    border-radius: 0;
+}
