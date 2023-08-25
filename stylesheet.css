@@ -1,0 +1,230 @@
+@CHARSET "ISO-8859-1";
+
+/* ----------Body and Page-Size----------- */
+body {
+ background: rgb(204, 204, 204);
+ font-family: 'Montserrat', sans-serif;
+}
+
+.page {
+ background: white;
+ display: block;
+ margin: 0 auto;
+ margin-bottom: 0.5cm;
+ box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
+}
+
+.page[data-size="A4"] {
+ width: 21cm;
+ height: 29.7cm;
+}
+
+/* 
+table,
+tr,
+td,
+th {
+	
+	border-top: none;
+	border-left: none;
+	border-right: none;
+  
+}
+input {
+	border-top: none;
+	border-left: none;
+	border-right: none;
+}
+textarea {
+	border-top: none;
+	border-left: none;
+	border-right: none;
+}
+select{
+border-top: none;
+	border-left: none;
+	border-right: none;
+}
+*/
+@media print {
+
+ body,
+ page {
+  margin: 0;
+  box-shadow: 0;
+  font-family: 'Montserrat', sans-serif;
+ }
+}
+
+
+/* ------------------ Header ------------- */
+marquee {
+ color: red;
+}
+
+h1,
+h2,
+h3 {
+ margin: 0px;
+}
+
+.h1 {
+ text-align: right;
+ color: Red;
+ font-size: 10px;
+ font-weight: bold;
+}
+
+.h2 {
+ text-align: Center;
+ color: Black;
+ font-size: 45px;
+ font-weight: bold;
+ margin-top: 20px;
+}
+
+.h3 {
+ text-align: Center;
+ color: Black;
+ font-size: 18px;
+ font-weight: lighter;
+ margin-bottom: 10px;
+}
+
+/*------------------ Table --------------------*/
+.table-Add {
+ /*border-collapse: collapse;*/
+ width: 100%;
+ margin-left: auto;
+ margin-right: auto;
+ margin-bottom: 4px;
+ font-family: 'Montserrat', sans-serif;
+}
+
+.tr {
+ font-size: 12px;
+}
+
+.th1 {
+ font-size: 12px;
+}
+
+.th2 {
+ font-size: 12px;
+}
+
+.thG {
+ font-size: 14px;
+ font-weight: 500;
+ /*	border: thick ; */
+}
+
+.text1 {
+ font-size: 15px;
+ font-weight: bold;
+ text-align: center;
+ display: block;
+ padding: 0px;
+}
+
+.tr1 {
+ font-size: 12px;
+}
+
+.table1 {
+ /*border: 1px;*/
+}
+
+/*
+.text-right1 {
+	display: unset;
+	text-align: justify;
+	padding: 0px;
+	}*/
+
+.text-right {
+ display: block;
+ text-align: end;
+ padding: 0px;
+ /* margin: 0 auto 1em auto;
+    width: 90%;  
+     border: 1px solid #818181;
+    padding: 3px;*/
+}
+
+/*------------------ Div --------------------*/
+.rowmain {
+ display: flex;
+ width: 100%;
+ margin: 5px 0;
+ justify-content: space-evenly;
+}
+
+.leftone {
+ position: relative;
+ float: left;
+ clear: right;
+ /*	width: 53%;*/
+ height: 20px;
+ font-family: 'Montserrat', sans-serif;
+ font-size: 12px;
+ overflow: hidden;
+}
+
+.rightone {
+ position: relative;
+ float: left;
+ clear: left;
+ width: 46%;
+ height: 20px;
+ font-family: 'Montserrat', sans-serif;
+ font-size: 12px;
+}
+
+.lefttext {
+ position: relative;
+ float: left;
+ clear: right;
+ width: 65%;
+ font-family: 'Montserrat', sans-serif;
+ font-size: 12px;
+ margin: 12px 12px 22px 0;
+ padding: 0;
+ /*	border: 1px solid;
+	overflow: hidden;*/
+}
+
+.righttext {
+ position: static;
+ float: right;
+ clear: right;
+ width: 35%;
+ margin: 1px 1px 1px 1px;
+ padding: 0px 0px 0px 5px;
+ font-family: 'Montserrat', sans-serif;
+ font-size: 12px;
+ text-align: end;
+}
+
+
+@media print {
+
+ body,
+ page {
+  margin: 0;
+  box-shadow: 0;
+ }
+
+ input[type=number]::-webkit-inner-spin-button,
+ input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+  margin: 0 !important;
+ }
+
+ /* Firefox */
+ input[type=number] {
+  -moz-appearance: textfield !important;
+ }
+}

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+ <meta charset="ISO-8859-1">
+ <title>Billing</title>
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+ <script type="text/javascript" src="jquery-3.6.3.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
+ <script type="text/javascript" src="Script.js"></script>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0/css/bootstrap.min.css" integrity="sha512-XWTTruHZEYJsxV3W/lSXG1n3Q39YIWOstqvmFsdNEEQfHoZ6vm6E9GK2OrF6DSJSpIbRbi+Nn0WDPID9O7xB2Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ <link href="stylesheet.css" rel="stylesheet">
+ <style>
+     @media screen, print {
+  input[type=number]::-webkit-inner-spin-button,
+  input[type=number]::-webkit-outer-spin-button {
+   -webkit-appearance: none !important;
+   -moz-appearance: none !important;
+   appearance: none !important;
+   margin: 0 !important;
+  }
+
+  /* Firefox */
+  input[type=number] {
+   -moz-appearance: textfield !important;
+   text-align: end !important;
+  }
+
+  textarea {
+   resize: vertical;
+   border: none;
+   border-bottom: 1px solid #c6c6c6;
+  }
+
+  #sub input.bg-transparent.border-0.border-bottom {
+   height: 46px;
+  }
+
+  textarea#word {
+   text-transform: capitalize;
+   font-weight: 500;
+      }
+      }
+ </style>
+</head>
+
+<body>
+ <marquee> Note : Invoice Sample Proper View On Desktop. </marquee>
+
+ <div class="col-md-12 text-right mb-3">
+  <button class="btn btn-primary" id="download">Download
+   Invoice PDF</button>
+   <button type="button" onclick="print();">Print Now...</button>
+ </div>
+
+ <div class="page" data-size="A4" id="capture">
+  <div id="invoice">
+   <h2 class="h2">
+    <br />
+   </h2>
+   <h3 class="h3">
+    <br />
+   </h3>
+
+   <div class="rowmain">
+    <table class="leftone">
+     <tr>
+      <th>M/s.</th>
+      <td><textarea name="particulars" rows="2" cols="42"></textarea></td>
+     </tr>
+     <tr>
+      <th>GST NO.</th>
+      <td><input type="text" size="24" class="bg-transparent border-0 border-bottom"></td>
+     </tr>
+    </table>
+
+    <table class="rightone">
+     <tr>
+      <th>Invoice No.</th>
+      <td><input type="text" style="width: 7em" class="border-0 border-bottom"></td>
+
+      <th>Date.</th>
+      <td><input type="date" style="width: 10em" class="border-0 border-bottom text-end"></td>
+     </tr>
+     <tr>
+      <th>D.Challan No.</th>
+      <td><input type="text" style="width: 7em" class="border-0 border-bottom"></td>
+
+      <th>Date.</th>
+      <td><input type="date" style="width: 10em" class="border-0 border-bottom text-end"></td>
+     </tr>
+    </table>
+   </div>
+   <hr>
+   <div class="rowmain">
+    <table id="sub">
+     <thead class="th1">
+      <tr class="text-center">
+       <th>Sr. No.</th>
+       <th>PARTICULARS.</th>
+       <th>HSN CODE</th>
+       <th>%</th>
+       <th>RATE</th>
+       <th>QTY</th>
+       <th>GST AMOUNT
+       </th>
+       <th>AMOUNT</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td><input type="Number" style="border: none; border-bottom: 1px solid #c6c6c6; width: 2.5em; height: 54px; margin: 0px; padding: 0; position: relative; top: -4px; text-align: center !important; font-size: 16px; font-weight: 600 !important; font-family: 'Montserrat';" min="0" max="1"></td>
+       <td><textarea name="particulars" rows="2" cols="25"></textarea></td>
+       <td valign="middle"><input type="text" size="8" class="bg-transparent border-0 border-bottom text-center" name="HSNCODE"></td>
+       <td valign="middle"><input type="number" class="input prec1 bg-transparent border-0 border-bottom" value="" style="width: 3em" name="pre"></td>
+       <td valign="middle"><input type="number" name="rate" class="input rate1 bg-transparent border-0 border-bottom" value="" style="width: 4em"></td>
+       <td valign="middle"><input type="number" name="qty" class="input qty1 bg-transparent border-0 border-bottom" value="" style="width: 4.5em"></td>
+       <td valign="middle"><input disabled="disabled" id="Gst1" class="text-end bg-transparent border-0 border-bottom" style="width: 5.5em" name="gst"></td>
+       <td valign="middle"><input disabled="disabled" class="text-end bg-transparent border-0 border-bottom" id="result1" name="result1" class="input result1" value="" style="width: 6em"></td>
+      </tr>
+
+      <tr>
+       <td><input type="Number" style="border: none; border-bottom: 1px solid #c6c6c6; width: 2.5em; height: 54px; margin: 0px; padding: 0; position: relative; top: -4px; text-align: center !important; font-size: 16px; font-weight: 600 !important; font-family: 'Montserrat';" min="0" max="1"></td>
+       <td><textarea name="particulars" rows="2" cols="25"></textarea></td>
+       <td valign="middle"><input type="text" size="8" class="bg-transparent border-0 border-bottom text-center" name="HSNCODE"></td>
+       <td valign="middle"><input type="number" class="input prec2 bg-transparent border-0 border-bottom" value="" style="width: 3em" name="pre"></td>
+       <td valign="middle"><input type="number" name="rate" class="input rate2 bg-transparent border-0 border-bottom" value="" style="width: 4em"></td>
+       <td valign="middle"><input type="number" name="qty" class="input qty2 bg-transparent border-0 border-bottom" value="" style="width: 4.5em"></td>
+       <td valign="middle"><input disabled="disabled" id="Gst2" class="text-end bg-transparent border-0 border-bottom" style="width: 5.5em" name="gst2"></td>
+       <td valign="middle"><input disabled="disabled" class="text-end bg-transparent border-0 border-bottom" id="result2" name="result2" class="input result2" style="width: 6em"></td>
+      </tr>
+
+      <tr>
+       <td><input type="Number" style="border: none; border-bottom: 1px solid #c6c6c6; width: 2.5em; height: 54px; margin: 0px; padding: 0; position: relative; top: -4px; text-align: center !important; font-size: 16px; font-weight: 600 !important; font-family: 'Montserrat';" min="0" max="1"></td>
+       <td><textarea name="particulars" rows="2" cols="25"></textarea></td>
+       <td valign="middle"><input type="text" size="8" class="bg-transparent border-0 border-bottom text-center" name="HSNCODE"></td>
+       <td valign="middle"><input type="number" class="input prec3 bg-transparent border-0 border-bottom" value="" style="width: 2em" name="pre"></td>
+       <td valign="middle"><input type="number" name="rate" class="input rate3 bg-transparent border-0 border-bottom" value="" style="width: 4em"></td>
+       <td valign="middle"><input type="number" name="qty" class="input qty3 bg-transparent border-0 border-bottom" value="" style="width: 4.5em"></td>
+       <td valign="middle"><input disabled="disabled" class="text-end bg-transparent border-0 border-bottom" id="Gst3" style="width: 5.5em" name="gst3"></td>
+       <td valign="middle"><input disabled="disabled" class="text-end bg-transparent border-0 border-bottom" id="result3" name="result3" class="input result3" style="width: 6em"></td>
+      </tr>
+
+      <tr>
+       <td><input type="Number" style="border: none; border-bottom: 1px solid #c6c6c6; width: 2.5em; height: 54px; margin: 0px; padding: 0; position: relative; top: -4px; text-align: center !important; font-size: 16px; font-weight: 600 !important; font-family: 'Montserrat';" min="0" max="1"></td>
+       <td><textarea name="particulars" rows="2" cols="25"></textarea></td>
+       <td valign="middle"><input type="text" size="8" class="bg-transparent border-0 border-bottom text-center" name="HSNCODE"></td>
+       <td valign="middle"><input type="number" class="input1 prec4 bg-transparent border-0 border-bottom" value="" style="width: 3em" name="pre"></td>
+       <td valign="middle"><input type="number" name="rate" class="input rate4 bg-transparent border-0 border-bottom" value="" style="width: 4em"></td>
+       <td valign="middle"><input type="number" name="qty" class="input qty4 bg-transparent border-0 border-bottom" value="" style="width: 4.5em"></td>
+       <td valign="middle"><input disabled="disabled" class="text-end bg-transparent border-0 border-bottom" id="Gst4" style="width: 5.5em" name="gst4"></td>
+       <td valign="middle"><input disabled="disabled" class="text-end bg-transparent border-0 border-bottom" id="result4" name="result4" class="input result4" style="width: 6em"></td>
+      </tr>
+
+      <tr>
+       <td><input type="Number" style="border: none; border-bottom: 1px solid #c6c6c6; width: 2.5em; height: 54px; margin: 0px; padding: 0; position: relative; top: -4px; text-align: center !important; font-size: 16px; font-weight: 600 !important; font-family: 'Montserrat';" min="0" max="1"></td>
+       <td><textarea name="particulars" rows="2" cols="25"></textarea></td>
+       <td valign="middle"><input type="text" size="8" class="bg-transparent border-0 border-bottom text-center" name="HSNCODE"></td>
+       <td valign="middle"><input type="number" class="input1 prec5 bg-transparent border-0 border-bottom" value="" style="width: 3em " name="pre"></td>
+       <td valign="middle"><input type="number" name="rate" class="input rate5 bg-transparent border-0 border-bottom" value="" style="width: 4em"></td>
+       <td valign="middle"><input type="number" name="qty" class="input qty5 bg-transparent border-0 border-bottom" value="" style="width: 4.5em"></td>
+       <td valign="middle"><input disabled="disabled" class="text-end bg-transparent border-0 border-bottom" id="Gst5" style="width: 5.5em" name="gst5"></td>
+       <td valign="middle"><input disabled="disabled" class="text-end bg-transparent border-0 border-bottom" id="result5" name="result5" class="input result5" style="width: 6em"></td>
+      </tr>
+
+      <tr>
+       <td><input type="Number" style="border: none; border-bottom: 1px solid #c6c6c6; width: 2.5em; height: 54px; margin: 0px; padding: 0; position: relative; top: -4px; text-align: center !important; font-size: 16px; font-weight: 600 !important; font-family: 'Montserrat';" min="0" max="1"></td>
+       <td><textarea name="particulars" rows="2" cols="25"></textarea></td>
+       <td valign="middle"><input type="text" size="8" class="bg-transparent border-0 border-bottom text-center" name="HSNCODE"></td>
+       <td valign="middle"><input type="number" class="input1 prec6 bg-transparent border-0 border-bottom text-center" value="" style="width: 3em" name="pre"></td>
+       <td valign="middle"><input type="number" name="rate" class="input rate6 bg-transparent border-0 border-bottom text-center" value="" style="width: 4em"></td>
+       <td valign="middle"><input type="number" name="qty" class="input qty6 bg-transparent border-0 border-bottom text-center" value="" style="width: 4.5em"></td>
+       <td valign="middle"><input disabled="disabled" class="text-end bg-transparent border-0 border-bottom" id="Gst6" style="width: 5.5em" name="gst6"></td>
+       <td valign="middle"><input disabled="disabled" class="text-end bg-transparent border-0 border-bottom" id="result6" name="result6" class="input result6" style="width: 6em"></td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+   <hr>
+   <div class="rowmain">
+
+    <div class="leftttext">
+     <table class="table-Add th1 border-end">
+      <tr>
+       <th>Place of Supply</th>
+       <td><select name="slist" class="border-0 border-bottom w-100">
+         <option value="">------------Select State------------</option>
+         <option value="Andaman and Nicobar Islands">Andaman
+          and Nicobar Islands</option>
+         <option value="Andhra Pradesh">Andhra Pradesh</option>
+         <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+         <option value="Assam">Assam</option>
+         <option value="Bihar">Bihar</option>
+         <option value="Chandigarh">Chandigarh</option>
+         <option value="Chhattisgarh">Chhattisgarh</option>
+         <option value="Dadra and Nagar Haveli">Dadra and Nagar
+          Haveli</option>
+         <option value="Daman and Diu">Daman and Diu</option>
+         <option value="Delhi">Delhi</option>
+         <option value="Goa">Goa</option>
+         <option value="Gujarat">Gujarat</option>
+         <option value="Haryana">Haryana</option>
+         <option value="Himachal Pradesh">Himachal Pradesh</option>
+         <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+         <option value="Jharkhand">Jharkhand</option>
+         <option value="Karnataka">Karnataka</option>
+         <option value="Kerala">Kerala</option>
+         <option value="Lakshadweep">Lakshadweep</option>
+         <option value="Madhya Pradesh">Madhya Pradesh</option>
+         <option value="Maharashtra">Maharashtra</option>
+         <option value="Manipur">Manipur</option>
+         <option value="Meghalaya">Meghalaya</option>
+         <option value="Mizoram">Mizoram</option>
+         <option value="Nagaland">Nagaland</option>
+         <option value="Orissa">Orissa</option>
+         <option value="Pondicherry">Pondicherry</option>
+         <option value="Punjab">Punjab</option>
+         <option value="Rajasthan">Rajasthan</option>
+         <option value="Sikkim">Sikkim</option>
+         <option value="Tamil Nadu">Tamil Nadu</option>
+         <option value="Tripura">Tripura</option>
+         <option value="Uttaranchal">Uttaranchal</option>
+         <option value="Uttar Pradesh">Uttar Pradesh</option>
+         <option value="West Bengal">West Bengal</option>
+        </select></td>
+      </tr>
+      <tr>
+       <th>Billing Address</th>
+       <td><textarea name="particulars" rows="2" cols="53"></textarea></td>
+      </tr>
+      <tr>
+       <th>Shipping Address</th>
+       <td><textarea name="particulars" rows="2" cols="53"></textarea></td>
+      </tr>
+      <tr>
+       <th>Rupees in Words</th>
+
+       <td><textarea id="word" value="" rows="2" cols="53"></textarea></td>
+      </tr>
+     </table>
+    </div>
+
+    <div class="righttext">
+     <table>
+      <tr>
+       <th class="th2">Total Amount W/O GST</th>
+       <td><input disabled="disabled" class="text-end border-0 border-bottom bg-transparent w-75 mb-1" id="AmountT"></td>
+      </tr>
+      <tr>
+       <th class="th2">Total GST Amount</th>
+       <td><input disabled="disabled" class="text-end border-0 border-bottom bg-transparent w-75 mb-1" id="GstT"></td>
+      </tr>
+      <tr>
+       <th class="th2">CGST</th>
+       <td><input disabled="disabled" class="text-end border-0 border-bottom bg-transparent w-75 mb-1" id="CGST"></td>
+      </tr>
+      <tr>
+       <th class="th2">SGST</th>
+       <td><input disabled="disabled" class="text-end border-0 border-bottom bg-transparent w-75 mb-1" id="SGST"></td>
+      </tr>
+      <tr>
+       <th class="th2">IGST</th>
+       <td><input disabled="disabled" class="text-end border-0 border-bottom bg-transparent w-75 mb-1"></td>
+      </tr>
+      <tr>
+       <th class="thG fw-semibold" style="font-size: 14px;">Grand Total</th>
+       <td><input disabled="disabled" class="fw-semibold text-end border-0 border-bottom bg-transparent w-75 mb-1" style="font-size: 14px;" id="grandT" value="" class="input number" onkeyup="word.innerHTML=convertNumberToWords(this.value)"></td>
+      </tr>
+     </table>
+    </div>
+   </div>
+   <hr>
+   <div class="rowmain">
+    <table class="fw-normal">
+     <tr>
+      <th class="fs-6 text-left px-2 fw-normal border-end">GST No : XXXXXXXXXXXX.<br>
+       Name Of Bank.<br> Name Of Branch.<br> IFSC Code :
+       XXXXXXXX.<br> A/C No : XXXXXXXXXXX.
+      </th>
+
+      <th width="360" class="th1 text-left ps-1 fw-normal border-end ps-4 px-3">1.Interest at 24%
+       will be charged on bill not paid with in 15 days. <br> 2.We
+       reserve the right to demand payment of this bill at any time. <br>
+       3.All payments are to be made at payee's A/c Cheque only in
+       favour of XXX XXXX XXXXX. <br> 4.All our transaction & bill
+       are Subject to city Jurisdiction.
+      </th>
+
+      <th class="fs-6 fw-normal ps-2 text-center">
+       <p class="mb-0">For XXXXX XXXXX XXXXXX</p>
+       <img src="Sing.jpg" align="middle" width="100" height="100"> <br>
+       Authorised Signatory
+      </th>
+     </tr>
+    </table>
+   </div>
+   <hr>
+   <div align="center">Your Address: G.d Somani Memorial Schl Cuffe Parade Colaba, Mumbai, Mumbai, 400005, India.</div>
+
+   
+   </div>
+ </div>
+</body>
+
+</html>
